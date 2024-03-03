@@ -30,7 +30,7 @@
 # 💚:green_heart: テストやCIの修正・改善 (test)
 # 👷:construction_worker:             ビルドシステムや外部依存関係の変更
 # 🔧:wrench:      依存パッケージなどのアップデート (chore)
-# 🌐:wrench:      i18n (国際化) 関連の変更
+# 🌐:globe_with_meridians:      i18n (国際化) 関連の変更
 # 👓:eyeglasses:  a11y (アクセシビリティ) 関連の変更
 # 📈:chart_with_upwards_trend:     メトリクスやログの追加/改善
 # ----------------------------------------
