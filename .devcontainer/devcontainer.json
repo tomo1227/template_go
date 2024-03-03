@@ -1,20 +1,15 @@
 {
     "name": "go_sample",
     "dockerComposeFile": [
-        "docker-compose.yml",
-        "../docker-compose.yml"
+        "docker-compose.yml"
     ],
-    "service": "devcontainer",
+    "service": "backend",
     "workspaceFolder": "/workspace",
     "features": {
-        "ghcr.io/devcontainers/features/aws-cli:1": {
-            "version": "latest"
-        },
         "ghcr.io/devcontainers/features/go:1": {
             "version": "latest"
         }
     },
-    // "initializeCommand": "aws-vault exec admin_role -- env | grep AWS > .env",
     "postCreateCommand": "sh .devcontainer/post_create.sh",
     "postStartCommand": "sh .devcontainer/post_start.sh ${containerWorkspaceFolder}",
     "customizations": {
