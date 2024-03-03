@@ -50,7 +50,6 @@ jobs:
         with:
           imageName: ghcr.io/tomo1227/dust-devcontainer
           runCmd: |
-            GOWORK=off go generate ./tool/ent/
             go mod tidy
             go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
           
