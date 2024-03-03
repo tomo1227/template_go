@@ -1,0 +1,60 @@
+{
+    "name": "go_sample",
+    "dockerComposeFile": [
+        "docker-compose.yml",
+        "../docker-compose.yml"
+    ],
+    "service": "devcontainer",
+    "workspaceFolder": "/workspace",
+    "features": {
+        "ghcr.io/devcontainers/features/aws-cli:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "latest"
+        }
+    },
+    // "initializeCommand": "aws-vault exec admin_role -- env | grep AWS > .env",
+    "postCreateCommand": "sh .devcontainer/post_create.sh",
+    "postStartCommand": "sh .devcontainer/post_start.sh ${containerWorkspaceFolder}",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.guides.bracketPairs": true,
+                "editor.formatOnSave": true,
+                "[go]": {
+                    "editor.formatOnSave": true,
+                    "editor.defaultFormatter": "golang.go"
+                },
+                "go.toolsManagement.autoUpdate": true,
+                "go.formatTool": "gofmt",
+                "clang-format.executable": "/usr/bin/clang-format"
+            },
+            "extensions": [
+                "ms-vscode.live-server",
+                "ms-vscode.makefile-tools",
+                "GitHub.vscode-pull-request-github",
+                "github.vscode-github-actions",
+                "mhutchie.git-graph",
+                "eamodio.gitlens",
+                "donjayamanne.githis",
+                "github.vscode-github-actions",
+                "adpyke.vscode-sql-formatter",
+                "streetsidesoftware.code-spell-checker",
+                "naumovs.color-highlight",
+                "burkeholland.simple-react-snippets",
+                "formulahendry.auto-rename-tag",
+                "MariusAlchimavicius.json-to-ts",
+                "dsznajder.es7-react-js-snippets",
+                "styled-components.vscode-styled-components",
+                "tamasfe.even-better-toml",
+                "Gruntfuggly.todo-tree",
+                "seatonjiang.gitmoji-vscode",
+                "oderwat.indent-rainbow",
+                "pkief.material-icon-theme",
+                "premparihar.gotest",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}

@@ -1,1 +1,3 @@
 # template_golang
+
+golangのapiのtemplateブランチ
