@@ -1,8 +1,8 @@
 version: "3.8"
 services:
-  backend:
-    hostname: ${PROJECT_NAME}_backend
-    container_name: devcontainer
+  devcontainer:
+    # hostname: ${PROJECT_NAME}_backend
+    # container_name: devcontainer
     build:
       context: .
       dockerfile: Dockerfile
