@@ -1,11 +1,11 @@
 version: "3.8"
 services:
   devcontainer:
-    # hostname: ${PROJECT_NAME}_backend
-    # container_name: devcontainer
+    hostname: ${PROJECT_NAME}_backend
+    container_name: ${PROJECT_NAME}_devcontainer
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: .devcontainer/Dockerfile
     volumes:
       - ..:/workspace:cached
     ports:

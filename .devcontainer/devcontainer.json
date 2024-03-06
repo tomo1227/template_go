@@ -1,10 +1,11 @@
 {
-    "name": "go_sample",
+    "name": "go-template",
     "dockerComposeFile": [
+        "../docker-compose.yml",
         "docker-compose.yml"
     ],
     "service": "devcontainer",
-    "workspaceFolder": "/workspace",
+    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
     "features": {
         "ghcr.io/devcontainers/features/go:1": {
             "version": "latest"
