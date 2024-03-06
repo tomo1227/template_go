@@ -49,7 +49,6 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/tomo1227/template_golang-devcontainer
-          push: always
           runCmd: |
             go mod tidy
             go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
