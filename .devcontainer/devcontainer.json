@@ -5,7 +5,7 @@
         "docker-compose.yml"
     ],
     "service": "devcontainer",
-    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+    "workspaceFolder": "/workspace",
     "features": {
         "ghcr.io/devcontainers/features/go:1": {
             "version": "latest"
