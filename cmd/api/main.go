@@ -1,15 +1,26 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/samber/do"
+)
 
 func main() {
-	app := fiber.New()
+	injector := do.New()
 
-	app.Get("/health", func(c *fiber.Ctx) error {
-		return c.JSON(fiber.Map{
-			"status": "OK!",
-		})
-	})
+	// provides CarService
+	do.Provide(injector, NewCarService)
 
-	app.Listen(":8080")
+	// provides EngineService
+	do.Provide(injector, NewEngineService)
+
+	car := do.MustInvoke[*CarService](injector)
+	car.Start()
+	// prints "car starting"
+
+	do.HealthCheck[EngineService](injector)
+	// returns "engine broken"
+
+	// injector.ShutdownOnSIGTERM()    // will block until receiving sigterm signal
+	injector.Shutdown()
+	// prints "car stopped"
 }
