@@ -11,9 +11,9 @@ import (
 	"github.com/tomo1227/template_golang/internal/infrastructure/logger"
 )
 
-// Injectors from wire.go:
+// Injectors from injector_handler.go:
 
-func InjectHandler() handler.FiberHandler {
+func InjectFiberHandler() handler.FiberHandler {
 	slogLogger := logger.NewLogger()
 	fiberHandler := handler.NewFiberHandler(slogLogger)
 	return fiberHandler

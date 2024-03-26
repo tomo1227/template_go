@@ -33,7 +33,7 @@ func (router *Router) registerRoutes() error {
 		return c.Next()
 	})
 
-	h := injector.InjectHandler()
+	h := injector.InjectFiberHandler()
 	router.Fiber.Get("/hello", h.Greet)
 	return nil
 }

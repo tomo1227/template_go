@@ -9,7 +9,7 @@ import (
 	"github.com/tomo1227/template_golang/internal/infrastructure/logger"
 )
 
-func InjectHandler() handler.FiberHandler {
+func InjectFiberHandler() handler.FiberHandler {
 	wire.Build(
 		logger.NewLogger,
 		handler.NewFiberHandler,
