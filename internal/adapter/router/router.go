@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/tomo1227/template_golang/internal/adapter/handler"
+	"github.com/tomo1227/template_golang/internal/injector"
 )
 
 type Router struct {
@@ -32,6 +32,8 @@ func (router *Router) registerRoutes() error {
 		c.Locals("logger", l)
 		return c.Next()
 	})
-	handler.RegisterHandlers(router.Fiber)
+
+	h := injector.InjectHandler()
+	router.Fiber.Get("/hello", h.Greet)
 	return nil
 }

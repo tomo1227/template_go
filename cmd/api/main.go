@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"log/slog"
 	"net/http"
 	"os"
@@ -15,7 +14,7 @@ func main() {
 	logger.Info("Start up the server...")
 
 	router, err := router.NewRouter()
-	router.Fiber.Listen(":8080")
+	startFiberServer(":8080", router.Fiber, logger)
 	if err != nil {
 		logger.Error("Failed to initialize router", "error: ", err)
 		os.Exit(1)
@@ -23,10 +22,8 @@ func main() {
 }
 
 // startFiberServer starts a REST server.
-func startFiberServer(ctx context.Context, port string, server *fiber.App, logger *slog.Logger) {
-
+func startFiberServer(port string, server *fiber.App, logger *slog.Logger) {
 	if err := server.Listen(port); err != nil && err != http.ErrServerClosed {
 		logger.Error("Failed to start server: ", err)
 	}
-
 }
