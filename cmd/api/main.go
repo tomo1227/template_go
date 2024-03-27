@@ -1,26 +1,28 @@
 package main
 
 import (
-	"github.com/samber/do"
+	"log/slog"
+	"os"
+
+	"github.com/gofiber/fiber/v2"
+	"github.com/tomo1227/template_golang/internal/adapter/router"
 )
 
 func main() {
-	injector := do.New()
+	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
+	logger.Info("Start up the server...")
 
-	// provides CarService
-	do.Provide(injector, NewCarService)
+	router, err := router.NewRouter()
+	startFiberServer(":8080", router.Fiber, logger)
+	if err != nil {
+		logger.Error("Failed to initialize router", "error: ", err)
+		os.Exit(1)
+	}
+}
 
-	// provides EngineService
-	do.Provide(injector, NewEngineService)
-
-	car := do.MustInvoke[*CarService](injector)
-	car.Start()
-	// prints "car starting"
-
-	do.HealthCheck[EngineService](injector)
-	// returns "engine broken"
-
-	// injector.ShutdownOnSIGTERM()    // will block until receiving sigterm signal
-	injector.Shutdown()
-	// prints "car stopped"
+// startFiberServer starts a REST server.
+func startFiberServer(port string, server *fiber.App, logger *slog.Logger) {
+	if err := server.Listen(port); err != nil {
+		logger.Error("Failed to start server: ", err)
+	}
 }
