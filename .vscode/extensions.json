@@ -1,0 +1,35 @@
+{
+  "recommendations": [
+    // Go
+    "golang.go",
+    "premparihar.gotest",
+    "766b.go-outliner",
+    // yaml, jsonc, json
+    "redhat.vscode-yaml",
+    "esbenp.prettier-vscode",
+    // Git関連
+    "GitHub.vscode-pull-request-github",
+    "github.vscode-github-actions",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "donjayamanne.githis",
+    "github.vscode-github-actions",
+    "seatonjiang.gitmoji-vscode",
+    // SQL
+    "adpyke.vscode-sql-formatter",
+    // markdown
+    "yzhang.markdown-all-in-one",
+    "DavidAnson.vscode-markdownlint",
+    "bierner.github-markdown-preview",
+    // その他
+    "ms-vscode.makefile-tools",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "Gruntfuggly.todo-tree",
+    "oderwat.indent-rainbow",
+    "pkief.material-icon-theme",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode.live-server",
+    "ms-vscode.makefile-tools"
+  ]
+}
