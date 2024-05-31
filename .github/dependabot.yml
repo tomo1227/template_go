@@ -9,30 +9,40 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    commit-message:
+      prefix: "build🤖 "
 
-  - package-ecosystem: "gomod" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "gomod"
+    directory: "/"
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "build(deps): 🤖"
+      prefix: "build🤖 "
+
+  - package-ecosystem: "gomod"
+    directory: "/cmd/api"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "build🤖 "
 
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "build🤖 "
 
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/.devcontainer" # Location of package manifests
     schedule:
       interval: "weekly"
-
-  - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/docker" # Location of package manifests
-    schedule:
-      interval: "weekly"
+    commit-message:
+      prefix: "build🤖 "
 
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: "build🤖 "

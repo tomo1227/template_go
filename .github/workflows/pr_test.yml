@@ -3,10 +3,17 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - ".gitignore"
+      - "**.md"
   pull_request:
     types: [opened, synchronize]
+    paths-ignore:
+      - ".gitignore"
+      - "**.md"
   workflow_dispatch:
 permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -38,12 +45,12 @@ jobs:
           done
       # GCRにログイン
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3 
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          
+
       # imageをpull・golangのテスト
       - name: Build and run Dev Container task
         uses: devcontainers/ci@v0.3
@@ -52,4 +59,3 @@ jobs:
           runCmd: |
             go mod tidy
             go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
-          
