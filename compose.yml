@@ -9,5 +9,5 @@ services:
     volumes:
       - .:/workspace:cached
     ports:
-      - ${DEVCONTAINTER_HOST_PORT}:8080
+      - ${HOST_IP}:${DEVCONTAINTER_HOST_PORT}:8080
     tty: true
