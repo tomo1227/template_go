@@ -1,17 +1,15 @@
 # template_golang
 
-golang の api の template ブランチ
+Go の api の Template ブランチ
 
 # Usage
 
-- https://github.com/tomo1227/template_golang/blob/main/.devcontainer/.env
-- https://github.com/tomo1227/template_golang/blob/main/.devcontainer/devcontainer.json
-- https://github.com/tomo1227/template_golang/blob/main/.devcontainer/docker-compose.yml
-- https://github.com/tomo1227/template_golang/blob/main/.github/workflows/pr_test.yml
-- https://github.com/tomo1227/template_golang/blob/main/.github/pull_request_template.md
-- https://github.com/tomo1227/template_golang/blob/main/cmd/api/go.mod
-- https://github.com/tomo1227/template_golang/blob/main/go.mod
+このテンプレートをcloneしたら以下を自分の環境に合わせて編集しましょう。
 
-を修正する。
-
-> [!CAUTION] > [docker-compose.yml](https://github.com/tomo1227/template_golang/blob/main/docker-compose.yml) は削除してはいけない
+- [Contribution guidelines for this project](.devcontainer/.env)
+- [devcontainer.json](.devcontainer/devcontainer.json)
+- [compose.yml](.devcontainer/compose.yml)
+- [pr_test.yml](.github/workflows/pr_test.yml)
+- [pull_request_template](.github/pull_request_template.md)
+- [go.mod](cmd/api/go.mod)
+- [.env](.env)

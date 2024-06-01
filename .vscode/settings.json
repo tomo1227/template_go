@@ -14,6 +14,7 @@
     "editor.formatOnPaste": true,
     "editor.formatOnType": true
   },
+  "markdownlint.run": "onSave",
   "markdownlint.config": {
     "MD014": false,
     "MD025": false,
