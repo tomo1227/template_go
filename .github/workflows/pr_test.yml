@@ -58,7 +58,7 @@ jobs:
         with:
           imageName: ghcr.io/tomo1227/template_golang-devcontainer
           runCmd: |
-            go mod tidy
+            go list -m -f '{{.Dir}}' | xargs -I {} sh -c 'cd {} && go mod tidy'
             go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
             make lint
             make vulncheck

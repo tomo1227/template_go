@@ -18,7 +18,7 @@ vulncheck:
 
 .PHONY: install
 install:
-	go mod tidy
+	go list -m -f '{{.Dir}}' | xargs -I {} sh -c 'cd {} && go mod tidy'
 
 .PHONY: build
 build:
