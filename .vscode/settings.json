@@ -8,6 +8,8 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "go.formatTool": "gofmt",
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.yaml", "--fast"],
   "gopls": {
     "analyses": {
       "shadow": true
