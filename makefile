@@ -8,7 +8,7 @@ lint:
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 	go install mvdan.cc/unparam@latest
 	go list -f '{{.Dir}}/...' -m | xargs golangci-lint run
-	unparam -exported ./...
+	go list -f '{{.Dir}}/...' -m | xargs unparam -exported
 
 # 脆弱性診断を実行
 .PHONY: vulncheck
