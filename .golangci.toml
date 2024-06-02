@@ -1,0 +1,10 @@
+[linters]
+disable-all = true
+enable = ["unparam", "govet", "gci"]
+
+[linters-settings.depguard]
+list-type = "go"
+include-gostd = true
+
+[issues]
+exclude-use-default = false

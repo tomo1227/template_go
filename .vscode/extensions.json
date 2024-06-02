@@ -4,9 +4,10 @@
     "golang.go",
     "premparihar.gotest",
     "766b.go-outliner",
-    // yaml, jsonc, json
+    // yaml, jsonc, json, toml
     "redhat.vscode-yaml",
     "esbenp.prettier-vscode",
+    "tamasfe.even-better-toml",
     // Git関連
     "GitHub.vscode-pull-request-github",
     "github.vscode-github-actions",
