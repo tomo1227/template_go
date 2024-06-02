@@ -52,6 +52,13 @@
       "other": true,
       "comments": false,
       "strings": true
+    },
+    "[toml]": {
+      "editor.defaultFormatter": "tamasfe.even-better-toml",
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.formatOnSave": true,
+      "files.insertFinalNewline": true
     }
   },
   "cSpell.words": [
@@ -65,6 +72,7 @@
   "cSpell.ignorePaths": [
     ".vscode",
     ".devcontainer/devcontainer.json",
-    "go.work.sum"
+    "go.work.sum",
+    ".golangci.toml"
   ]
 }
