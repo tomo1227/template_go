@@ -1,16 +1,17 @@
 {
-  "name": "go-template",
-  "dockerComposeFile": ["../compose.yml"],
+  "name": "${localWorkspaceFolderBasename}",
   "service": "devcontainer",
   "workspaceFolder": "/workspace",
+  "dockerComposeFile": ["../compose.yml"],
   "features": {
     "ghcr.io/devcontainers/features/go:1": {
       "version": "1.22.3"
     }
   },
   "forwardPorts": [8080],
-  "postCreateCommand": "sh .devcontainer/post_create.sh",
-  "postStartCommand": "sh .devcontainer/post_start.sh ${containerWorkspaceFolder}",
+  "remoteUser": "vscode",
+  "postCreateCommand": "sh .devcontainer/scripts/post_create.sh",
+  "postStartCommand": "sh .devcontainer/scripts/post_start.sh ${containerWorkspaceFolder}",
   "customizations": {
     "vscode": {
       "extensions": [
