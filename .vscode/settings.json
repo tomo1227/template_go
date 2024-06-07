@@ -1,20 +1,20 @@
 {
-  "editor.guides.bracketPairs": true,
   "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go",
     "editor.autoIndent": "advanced"
   },
-  "go.toolsManagement.autoUpdate": true,
-  "go.formatTool": "gofmt",
-  "go.lintTool": "golangci-lint",
-  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.yaml", "--fast"],
   "gopls": {
     "analyses": {
       "shadow": true
     }
   },
+  "go.formatTool": "gofmt",
+  "go.lintTool": "golangci-lint",
+  "go.toolsManagement.autoUpdate": true,
+  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.yaml"],
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
@@ -26,7 +26,7 @@
     "MD025": false,
     "MD033": false
   },
-  "[jsonc]": {
+  "[jsonc][json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -34,15 +34,7 @@
     "editor.autoIndent": "advanced",
     "files.insertFinalNewline": true
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.formatOnSave": true,
-    "files.insertFinalNewline": true
-  },
-  "[dockercompose]": {
+  "[yaml][dockercompose]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -53,6 +45,7 @@
       "comments": false,
       "strings": true
     },
+    "yaml.format.enable": true,
     "[toml]": {
       "editor.defaultFormatter": "tamasfe.even-better-toml",
       "editor.insertSpaces": true,
@@ -69,6 +62,71 @@
     "gofmt",
     "gomod"
   ],
+  "todo-tree.general.tags": [
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "REVIEW",
+    "OPTIMIZE",
+    "CHANGED",
+    "NOTE",
+    "WARNING"
+  ],
+  "todo-tree.general.tags": [
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "REVIEW",
+    "OPTIMIZE",
+    "CHANGED",
+    "NOTE",
+    "WARNING"
+  ],
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "#000000",
+    "background": "#2C7CFF",
+    "iconColor": "#24ff41",
+    "opacity": 45
+  },
+  "todo-tree.highlights.customHighlight": {
+    "HACK": {
+      "icon": "zap"
+    },
+    "FIXME": {
+      "icon": "flame",
+      "background": "#f11e1e",
+      "iconColor": "#f11e1e"
+    },
+    "TODO": {
+      "icon": "check-circle"
+    },
+    "XXX": {
+      "icon": "x-circle",
+      "background": "#f8831d",
+      "iconColor": "#f8831d"
+    },
+    "REVIEW": {
+      "icon": "pin"
+    },
+    "OPTIMIZE": {
+      "icon": "rocket",
+      "background": "#f8831d",
+      "iconColor": "#f8831d"
+    },
+    "CHANGED": {
+      "icon": "issue-reopened"
+    },
+    "NOTE": {
+      "icon": "thumbsup"
+    },
+    "WARNING": {
+      "icon": "alert",
+      "background": "#f11e1e",
+      "iconColor": "#f11e1e"
+    }
+  },
   "cSpell.ignorePaths": [
     ".vscode",
     ".devcontainer/devcontainer.json",
