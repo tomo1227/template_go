@@ -7,19 +7,23 @@ test:
 lint: 
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 	go install mvdan.cc/unparam@latest
-	go list -f '{{.Dir}}/...' -m | xargs golangci-lint run
-	go list -f '{{.Dir}}/...' -m | xargs unparam -exported
+	golangci-lint run
+	unparam -exported ./...
 
 # 脆弱性診断を実行
 .PHONY: vulncheck
 vulncheck:
 	go install golang.org/x/vuln/cmd/govulncheck@latest
-	go list -m -f '{{.Dir}}' | xargs -I {} govulncheck -C {} ./...
+	go list -f '{{.Dir}}/...' -m | xargs govulncheck
 
 .PHONY: install
 install:
-	go list -m -f '{{.Dir}}' | xargs -I {} sh -c 'cd {} && go mod tidy'
+	go mod tidy
 
 .PHONY: build
 build:
-	go list -f '{{.Dir}}' -m | xargs -I {} go build -v {}
+	go list -f '{{.Dir}}/...' -m | xargs go build -v
+
+.PHONY: run
+run:
+	go run cmd/api/main.go

@@ -44,9 +44,9 @@
         "Gruntfuggly.todo-tree",
         "oderwat.indent-rainbow",
         "pkief.material-icon-theme",
-        "ms-azuretools.vscode-docker",
         "ms-vscode.live-server",
-        "ms-vscode.makefile-tools"
+        "ms-vscode.makefile-tools",
+        "usernamehw.errorlens"
       ]
     }
   }

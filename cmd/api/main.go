@@ -1,6 +1,8 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+)
 
 func main() {
 	app := fiber.New()
@@ -10,6 +12,5 @@ func main() {
 			"status": "OK!",
 		})
 	})
-
 	app.Listen(":8080")
 }

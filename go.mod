@@ -1,4 +1,4 @@
-module github.com/tomo1227/template_golang/cmd/api
+module template_golang
 
 go 1.22.3
 

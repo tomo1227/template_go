@@ -1,20 +1,47 @@
 {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
   "editor.guides.bracketPairs": true,
+  "editor.codeActionsOnSave": [],
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go",
-    "editor.autoIndent": "advanced"
+    "editor.autoIndent": "advanced",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    },
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
   },
+  "go.useLanguageServer": true,
   "gopls": {
     "analyses": {
       "shadow": true
-    }
+    },
+    "ui.semanticTokens": true,
+    "ui.completion.usePlaceholders": true,
+    "hoverKind": "SynopsisDocumentation",
+    "linkTarget": "pkg.go.dev",
+    "staticcheck": false,
+    "completionDocumentation": true,
+    "completeUnimported": true,
+    "deepCompletion": true
   },
+  "go.languageServerFlags": ["-rpc.trace", "serve", "--debug=localhost:6060"],
+  "go.trace.server": "verbose",
   "go.formatTool": "gofmt",
   "go.lintTool": "golangci-lint",
   "go.toolsManagement.autoUpdate": true,
-  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.yaml"],
+  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.yaml", "--fast"],
+  "go.addTags": {
+    "tags": "json,validate",
+    "options": "json=omitempty,validate=omitempty",
+    "promptForTags": false,
+    "transform": "snakecase",
+    "template": ""
+  },
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
@@ -36,6 +63,7 @@
   },
   "[yaml][dockercompose]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.formatOnSave": true,
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.autoIndent": "advanced",
@@ -44,34 +72,24 @@
       "other": true,
       "comments": false,
       "strings": true
-    },
-    "yaml.format.enable": true,
-    "[toml]": {
-      "editor.defaultFormatter": "tamasfe.even-better-toml",
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2,
-      "editor.formatOnSave": true,
-      "files.insertFinalNewline": true
     }
+  },
+  "yaml.format.enable": true,
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true
   },
   "cSpell.words": [
     "devcontainer",
     "devcontainers",
     "dockercompose",
+    "Godoc",
     "gofiber",
     "gofmt",
     "gomod"
-  ],
-  "todo-tree.general.tags": [
-    "HACK",
-    "FIXME",
-    "TODO",
-    "XXX",
-    "REVIEW",
-    "OPTIMIZE",
-    "CHANGED",
-    "NOTE",
-    "WARNING"
   ],
   "todo-tree.general.tags": [
     "HACK",
@@ -130,7 +148,6 @@
   "cSpell.ignorePaths": [
     ".vscode",
     ".devcontainer/devcontainer.json",
-    "go.work.sum",
     ".golangci.toml"
   ]
 }
