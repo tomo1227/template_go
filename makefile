@@ -27,3 +27,11 @@ build:
 .PHONY: run
 run:
 	go run cmd/api/main.go
+
+.PHONY: run
+run:
+	go run cmd/api/main.go
+
+.PHONY: godoc
+run:
+	go doc fmt
