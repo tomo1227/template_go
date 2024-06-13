@@ -28,10 +28,10 @@ build:
 run:
 	go run cmd/api/main.go
 
-.PHONY: run
-run:
-	go run cmd/api/main.go
-
 .PHONY: godoc
-run:
+godoc:
 	go doc fmt
+
+.PHONY: update
+update:
+	go get -u ./...
