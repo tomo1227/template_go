@@ -4,6 +4,17 @@
   "editor.formatOnType": false,
   "editor.guides.bracketPairs": true,
   "editor.codeActionsOnSave": [],
+  "editor.rulers": [120],
+  "keybindings": [
+    {
+      "key": "cmd+[BracketLeft]",
+      "command": "remote-containers.rebuildContainerNoCache"
+    },
+    {
+      "key": "cmd+[Semicolon]",
+      "command": "workbench.action.restartExtensionHost"
+    }
+  ],
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go",
@@ -41,6 +52,12 @@
     "promptForTags": false,
     "transform": "snakecase",
     "template": ""
+  },
+  "go.coverOnSave": true,
+  "go.coverageDecorator": {
+    "type": "gutter",
+    "coveredGutterStyle": "blockgreen",
+    "uncoveredGutterStyle": "blockred"
   },
   "[markdown]": {
     "editor.formatOnSave": true,
@@ -149,5 +166,6 @@
     ".vscode",
     ".devcontainer/devcontainer.json",
     ".golangci.toml"
-  ]
+  ],
+  "errorLens.excludeBySource": ["cSpell"]
 }
