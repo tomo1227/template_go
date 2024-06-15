@@ -18,7 +18,6 @@
         // Go
         "golang.go",
         "premparihar.gotest",
-        "766b.go-outliner",
         // yaml, jsonc, json, toml
         "redhat.vscode-yaml",
         "esbenp.prettier-vscode",

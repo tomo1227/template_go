@@ -1,6 +1,6 @@
 # template_golang
 
-Go の api の Template ブランチ
+Go の API の Template ブランチ
 
 # Usage
 
@@ -26,11 +26,11 @@ Go の api の Template ブランチ
 > sudo ifconfig lo0 alias 127.0.0.2
 > ```
 
-## merge
+## Merge
 
 main にマージするときは`squash and merge`すること
 
-## commit template の設定
+## Commit Template の設定
 
 ```bash
 git config --global commit.template .commit.template

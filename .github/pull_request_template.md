@@ -1,6 +1,6 @@
 # セルフチェック
 
-- [ ] [PRガイドライン](Readme.md#Pull Request ガイドライン)を守っている
+- [ ] [PRガイドライン](Readme.md#pull-request-ガイドライン)を守っている
 - [ ] ローカルでビルド、テストが通っている
 - [ ] [Godoc](https://pkg.go.dev/golang.org/x/tools/cmd/godoc)に沿って実装できている
 - [ ] ドキュメント化ができている

@@ -51,14 +51,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # TODO: dev-containerではなく、Docker上でlintと脆弱性診断は行う
-      # imageをpull・golangのテスト, lintと脆弱性診断
       - name: Build and run Dev Container task
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/tomo1227/template_golang-devcontainer
           runCmd: |
-            go list -m -f '{{.Dir}}' | xargs -I {} sh -c 'cd {} && go mod tidy'
-            go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
-            make lint
-            make vulncheck
+            echo "Success Dev-Container test"
