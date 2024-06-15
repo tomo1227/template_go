@@ -1,0 +1,13 @@
+name: auto-assign
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  auto-assign:
+    if: github.event.pull_request.user.login != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: add-assignee
+        uses: technote-space/assign-author@v1

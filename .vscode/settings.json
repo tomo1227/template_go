@@ -5,16 +5,6 @@
   "editor.guides.bracketPairs": true,
   "editor.codeActionsOnSave": [],
   "editor.rulers": [120],
-  "keybindings": [
-    {
-      "key": "cmd+[BracketLeft]",
-      "command": "remote-containers.rebuildContainerNoCache"
-    },
-    {
-      "key": "cmd+[Semicolon]",
-      "command": "workbench.action.restartExtensionHost"
-    }
-  ],
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go",
@@ -45,7 +35,7 @@
   "go.formatTool": "gofmt",
   "go.lintTool": "golangci-lint",
   "go.toolsManagement.autoUpdate": true,
-  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.yaml", "--fast"],
+  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.toml", "--fast"],
   "go.addTags": {
     "tags": "json,validate",
     "options": "json=omitempty,validate=omitempty",
@@ -78,7 +68,8 @@
     "editor.autoIndent": "advanced",
     "files.insertFinalNewline": true
   },
-  "[yaml][dockercompose]": {
+  "json.schemaDownload.enable": true,
+  "[yaml][dockercompose][github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
