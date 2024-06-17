@@ -37,4 +37,4 @@ jobs:
         run: make ci-test
         shell: bash
       - name: create report
-        uses: k1LoW/octocov-action@v0
+        uses: k1LoW/octocov-action@v1
