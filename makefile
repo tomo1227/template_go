@@ -1,12 +1,8 @@
+include .env
 # test を実行
 .PHONY: test
 test: 
 	go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(shell pwd) xargs go test -cover -v
-
-# action用のtest
-.PHONY: ci-test
-ci-test:
-	go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(shell pwd) xargs go test -v -covermode=count -coverprofile=coverage.out
 
 .PHONY: lint
 lint: 
@@ -33,16 +29,23 @@ build:
 run:
 	go run cmd/api/main.go
 
-.PHONY: godoc
-godoc:
-	go doc fmt
-
 .PHONY: update
 update:
 	go get -u ./...
 
-# テストカバレッジ出力(html)
+# テストカバレッジ出力
 .PHONY: cov
 cov:
 	go test -cover ./... -coverprofile=coverage.out
 	go tool cover -html=coverage.out -o coverage.html
+
+# action用のtest
+.PHONY: ci-test
+ci-test:
+	go list -f '{{.Dir}}/...' -m | xargs go test -v -race -coverprofile=coverage.out -covermode=atomic
+
+# GoDoc
+.PHONY: godoc
+godoc:
+	go install golang.org/x/tools/cmd/godoc@latest
+	godoc -http=:$(GODOC_PORT)
