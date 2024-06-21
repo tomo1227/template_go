@@ -3,27 +3,27 @@ updates:
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
-      interval: weekly
+      interval: daily
     commit-message:
       prefix: "build🤖 "
 
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     commit-message:
       prefix: "build🤖 "
 
   - package-ecosystem: "docker"
     directory: "/.devcontainer"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     commit-message:
       prefix: "build🤖 "
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     commit-message:
       prefix: "build🤖 "

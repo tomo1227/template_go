@@ -5,7 +5,7 @@
   "dockerComposeFile": ["../compose.yml"],
   "features": {
     "ghcr.io/devcontainers/features/go:1": {
-      "version": "1.22.3"
+      "version": "1.22.4"
     }
   },
   "forwardPorts": [8080],
@@ -27,8 +27,6 @@
         "github.vscode-github-actions",
         "mhutchie.git-graph",
         "eamodio.gitlens",
-        "donjayamanne.githis",
-        "github.vscode-github-actions",
         "seatonjiang.gitmoji-vscode",
         // SQL
         "adpyke.vscode-sql-formatter",
@@ -42,10 +40,10 @@
         "naumovs.color-highlight",
         "Gruntfuggly.todo-tree",
         "oderwat.indent-rainbow",
-        "pkief.material-icon-theme",
         "ms-vscode.live-server",
-        "ms-vscode.makefile-tools",
-        "usernamehw.errorlens"
+        "MS-vsliveshare.vsliveshare",
+        "usernamehw.errorlens",
+        "formulahendry.code-runner"
       ]
     }
   }
