@@ -7,9 +7,9 @@
     "ghcr.io/devcontainers/features/go:1": {
       "version": "1.22.4"
     },
-    "features": {
+    
       "ghcr.io/devcontainers/features/github-cli:1": {}
-    }
+
   },
   "forwardPorts": [8080],
   "remoteUser": "vscode",
