@@ -1,4 +1,4 @@
-name: go-test
+name: ci
 on:
   push:
     branches:
