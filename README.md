@@ -24,19 +24,18 @@ Codecovを使用しているため、[Codec GitHub app](https://github.com/apps/
 以下のコマンドでサンプルのサーバーを起動できる。
 
 ```sh
-cd cmd/api
 go run main.go
 ```
 
 ```shell_session
-$ curl localhost:8080/hello
-{"data":"Hello GoFr!"}
-$ curl -s localhost:2121/metrics | head -n 5
-# HELP app_go_numGC Number of completed Garbage Collector cycles.
-# TYPE app_go_numGC gauge
-app_go_numGC{otel_scope_name="gofr-app",otel_scope_version="dev"} 5
-# HELP app_go_routines Number of Go routines running.
-# TYPE app_go_routines gauge
+$ curl localhost:8080/health
+{"status":"OK!"}
+```
+
+## Go Doc
+
+```sh
+make doc
 ```
 
 ## PORTの割り当て

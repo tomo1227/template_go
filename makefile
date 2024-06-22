@@ -12,8 +12,8 @@ lint:
 	unparam -exported ./...
 
 # 脆弱性診断を実行
-.PHONY: vulncheck
-vulncheck:
+.PHONY: vuln
+vuln:
 	go install golang.org/x/vuln/cmd/govulncheck@latest
 	go list -f '{{.Dir}}/...' -m | xargs govulncheck
 
@@ -45,7 +45,7 @@ ci-test:
 	go list -f '{{.Dir}}/...' -m | xargs go test -v -race -coverprofile=coverage.out -covermode=atomic
 
 # GoDoc
-.PHONY: godoc
-godoc:
+.PHONY: doc
+doc:
 	go install golang.org/x/tools/cmd/godoc@latest
 	godoc -http=:$(GODOC_PORT)
