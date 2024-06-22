@@ -43,7 +43,7 @@ jobs:
         run: make lint
         shell: bash
       - name: Check vulnerability
-        run: make vulncheck
+        run: make vuln
         shell: bash
       # ビルド
       - name: Build
