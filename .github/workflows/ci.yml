@@ -40,7 +40,12 @@ jobs:
         with:
           go-version-file: go.mod
       - name: Check lint
-        uses: golangci/golangci-lint-action@v6
+        uses: reviewdog/action-golangci-lint@v2
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: warning
+          golangci_lint_flags: "--config=.golangci.yml"
       - name: Check vulnerability
         run: make vuln
         shell: bash
