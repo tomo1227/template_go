@@ -28,19 +28,15 @@
         "mhutchie.git-graph",
         "eamodio.gitlens",
         "seatonjiang.gitmoji-vscode",
-        // SQL
-        "adpyke.vscode-sql-formatter",
         // markdown
         "yzhang.markdown-all-in-one",
         "DavidAnson.vscode-markdownlint",
         "bierner.github-markdown-preview",
         // その他
-        "ms-vscode.makefile-tools",
         "streetsidesoftware.code-spell-checker",
         "naumovs.color-highlight",
         "Gruntfuggly.todo-tree",
         "oderwat.indent-rainbow",
-        "ms-vscode.live-server",
         "MS-vsliveshare.vsliveshare",
         "usernamehw.errorlens",
         "formulahendry.code-runner"
