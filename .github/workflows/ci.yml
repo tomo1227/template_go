@@ -45,7 +45,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           level: warning
-          golangci_lint_flags: "--config=.golangci.yml"
+          golangci_lint_flags: "--config=.golangci.toml"
       - name: Check vulnerability
         run: make vuln
         shell: bash
