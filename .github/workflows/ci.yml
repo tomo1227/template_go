@@ -40,9 +40,6 @@ jobs:
         with:
           go-version-file: go.mod
       - name: Check lint
-        run: make lint
-        shell: bash
-      - name: golangci-lint
         uses: golangci/golangci-lint-action@v6
       - name: Check vulnerability
         run: make vuln
