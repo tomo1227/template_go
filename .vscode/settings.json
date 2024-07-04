@@ -27,7 +27,6 @@
     "ui.completion.usePlaceholders": true,
     "hoverKind": "SynopsisDocumentation",
     "linkTarget": "pkg.go.dev",
-    "staticcheck": false,
     "completionDocumentation": true,
     "completeUnimported": true,
     "deepCompletion": true
@@ -60,7 +59,8 @@
   "markdownlint.run": "onSave",
   "markdownlint.config": {
     "MD025": false,
-    "MD033": false
+    "MD033": false,
+    "MD034": false
   },
   "[jsonc][json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
