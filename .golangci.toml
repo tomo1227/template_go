@@ -6,6 +6,7 @@ enable = [
   "gci",
   "typecheck",
   "unused",
+  "errcheck",
   "gosimple",
   "ineffassign",
   "staticcheck",
