@@ -16,13 +16,13 @@
     // markdown
     "yzhang.markdown-all-in-one",
     "DavidAnson.vscode-markdownlint",
-    "bierner.github-markdown-preview",
+    "shd101wyy.markdown-preview-enhanced",
     // その他
     "streetsidesoftware.code-spell-checker",
     "naumovs.color-highlight",
     "Gruntfuggly.todo-tree",
     "oderwat.indent-rainbow",
-    "ms-vscode.live-server",
+    "ms-vsliveshare.vsliveshare",
     "usernamehw.errorlens",
     "formulahendry.code-runner"
   ]
