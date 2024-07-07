@@ -34,6 +34,7 @@
   "go.languageServerFlags": ["-rpc.trace", "serve", "--debug=localhost:6060"],
   "go.trace.server": "verbose",
   "go.formatTool": "gofmt",
+  "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.toolsManagement.autoUpdate": true,
   "go.lintFlags": ["--config=${workspaceFolder}/.golangci.toml", "--fast"],
