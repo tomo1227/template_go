@@ -24,7 +24,7 @@ Codecovを使用しているため、[Codec GitHub app](https://github.com/apps/
 以下のコマンドでサンプルのサーバーを起動できる。
 
 ```sh
-go run main.go
+make run
 ```
 
 ```shell_session

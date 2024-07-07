@@ -9,6 +9,11 @@ lint:
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 	golangci-lint run
 
+# Lintの自動修正
+.PHONY: fix
+fix:
+	golangci-lint run --fix
+
 # 脆弱性診断
 .PHONY: vuln
 vuln:
@@ -47,3 +52,8 @@ ci-test:
 doc:
 	go install golang.org/x/tools/cmd/godoc@latest
 	godoc -http=:$(GODOC_PORT)
+
+# codecovのymlが有効かどうかチェックする
+.PHONY: codecov
+codecov:
+	curl --data-binary @codecov.yml https://codecov.io/validate
