@@ -63,6 +63,13 @@
     "MD033": false,
     "MD034": false
   },
+  "markdown.extension.print.theme": "dark",
+  "markdown.copyFiles.destination": {
+    "**/*": "../media/img/img.${fileExtName}"
+  },
+  "markdown-preview-enhanced.codeBlockTheme": "solarized-light.css",
+  "markdown.extension.toc.unorderedList.marker": "*",
+  "markdown.extension.orderedList.marker": "one",
   "[jsonc][json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.insertSpaces": true,
