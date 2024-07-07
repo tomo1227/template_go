@@ -6,6 +6,7 @@ test:
 
 .PHONY: lint
 lint: 
+	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 	golangci-lint run
 
 # 脆弱性診断
@@ -24,7 +25,7 @@ build:
 
 .PHONY: run
 run:
-	go run cmd/api/.
+	cd cmd/api; go run .
 
 .PHONY: update
 update:
