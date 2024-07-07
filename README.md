@@ -1,6 +1,6 @@
 # template_golang
 
- [![CI](https://github.com/tomo1227/template_golang/actions/workflows/ci.yml/badge.svg)](https://github.com/tomo1227/template_golang/actions/workflows/ci.yml) [![codecov](https://codecov.io/github/tomo1227/template_golang/graph/badge.svg?token=9W57OUKPMU)](https://codecov.io/github/tomo1227/template_golang) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ [![CI](https://github.com/tomo1227/template_golang/actions/workflows/ci.yml/badge.svg)](https://github.com/tomo1227/template_golang/actions/workflows/ci.yml) [![CodeQL](https://github.com/tomo1227/template_golang/actions/workflows/code_ql.yml/badge.svg)](https://github.com/tomo1227/template_golang/actions/workflows/code_ql.yml) [![codecov](https://codecov.io/github/tomo1227/template_golang/graph/badge.svg?token=9W57OUKPMU)](https://codecov.io/github/tomo1227/template_golang)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Go の API の Template ブランチ
 
