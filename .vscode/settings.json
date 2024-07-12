@@ -61,6 +61,7 @@
   },
   "markdownlint.run": "onSave",
   "markdownlint.config": {
+    "MD010": false,
     "MD025": false,
     "MD033": false,
     "MD034": false
@@ -265,5 +266,24 @@
     ".devcontainer/devcontainer.json",
     ".golangci.toml"
   ],
-  "errorLens.excludeBySource": ["cSpell"]
+  "errorLens.excludeBySource": ["cSpell"],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#05848b",
+    "activityBar.background": "#05848b",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#fb84f4",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#05848b",
+    "statusBar.background": "#03555a",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#05848b",
+    "statusBarItem.remoteBackground": "#03555a",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#03555a",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#03555a99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  }
 }
