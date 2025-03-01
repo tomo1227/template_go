@@ -60,3 +60,17 @@ doc:
 .PHONY: codecov
 codecov:
 	curl --data-binary @codecov.yml https://codecov.io/validate
+
+# コンテナの起動(ローカルでのみ)
+.PHONY: up
+up:
+	docker-compose up -d
+
+# コンテナの削除(ローカルでのみ)
+.PHONY: down
+down:
+	docker compose down --rmi all --volumes --remove-orphans
+
+.PHONY: prune
+prune:
+	docker system prune -a
