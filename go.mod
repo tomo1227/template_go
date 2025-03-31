@@ -1,4 +1,4 @@
-module github.com/tomo1227/template_go
+module template_go
 
 go 1.24.0
 

@@ -35,11 +35,15 @@
   },
   "go.languageServerFlags": ["-rpc.trace", "serve", "--debug=localhost:6060"],
   "go.trace.server": "verbose",
-  "go.formatTool": "gofmt",
   "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.toolsManagement.autoUpdate": true,
-  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.toml", "--fast"],
+  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.toml", "--fast-only"],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint"
+  },
+  "go.formatFlags": ["fmt", "--stdin"],
   "go.addTags": {
     "tags": "json,validate",
     "options": "json=omitempty,validate=omitempty",
@@ -266,24 +270,5 @@
     ".devcontainer/devcontainer.json",
     ".golangci.toml"
   ],
-  "errorLens.excludeBySource": ["cSpell"],
-  "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#05848b",
-    "activityBar.background": "#05848b",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#fb84f4",
-    "activityBarBadge.foreground": "#15202b",
-    "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#05848b",
-    "statusBar.background": "#03555a",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#05848b",
-    "statusBarItem.remoteBackground": "#03555a",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#03555a",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#03555a99",
-    "titleBar.inactiveForeground": "#e7e7e799"
-  }
+  "errorLens.excludeBySource": ["cSpell"]
 }
