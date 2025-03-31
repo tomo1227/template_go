@@ -9,12 +9,13 @@ test:
 
 .PHONY: lint
 lint: 
-	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+	go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.0.2
 	golangci-lint run
 
 # Lintの自動修正
 .PHONY: fix
 fix:
+	go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.0.2
 	golangci-lint run --fix
 
 # 脆弱性診断

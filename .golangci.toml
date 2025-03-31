@@ -1,11 +1,8 @@
+version = "2"
+
 [linters]
-disable-all = true
-enable = [
-  "unparam",
-  "govet",
-  "typecheck",
-  "unused",
-  "gosimple",
-  "ineffassign",
-  "staticcheck",
-]
+default = "none"
+enable = ["unparam", "govet", "unused", "ineffassign", "staticcheck"]
+
+[formatters]
+enable = ["gofmt", "goimports"]
