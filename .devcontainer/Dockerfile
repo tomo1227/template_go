@@ -2,14 +2,17 @@ FROM debian:bookworm
 
 USER root
 
-ARG TARGET_GO_VERSION=latest \
+ENV TARGET_GO_VERSION=latest \
     GOLANGCILINT_VERSION=latest \
     TARGET_GOROOT=/usr/local/go \
     TARGET_GOPATH=/go \
-    DEBIAN_FRONTEND=noninteractive \
-    USERNAME=vscode \
-    USER_UID=1000 \
-    USER_GID=$USER_UID
+    USERNAME=vscode
+
+ENV DEBIAN_FRONTEND noninteractive
+
+ARG USERNAME=vscode
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
 
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
