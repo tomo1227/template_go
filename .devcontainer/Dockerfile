@@ -1,5 +1,4 @@
-ARG VARIANT=1.24-bookworm
-FROM golang:${VARIANT}
+FROM golang:1.24.3-bookworm
 
 USER root
 
