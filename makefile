@@ -8,9 +8,12 @@ test:
 	go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(shell pwd) xargs go test -cover -v
 
 .PHONY: lint
-lint: 
-	go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.0.2
+lint:
 	golangci-lint run
+
+.PHONY: fmt
+fmt: 
+	golangci-lint fmt
 
 # Lintの自動修正
 .PHONY: fix
@@ -62,16 +65,22 @@ doc:
 codecov:
 	curl --data-binary @codecov.yml https://codecov.io/validate
 
-# コンテナの起動(ローカルでのみ)
+# コンテナの起動(ローカルのみ)
 .PHONY: up
 up:
-	docker-compose up -d
+	docker compose up -d
 
-# コンテナの削除(ローカルでのみ)
+# コンテナの削除(ローカルのみ)
 .PHONY: down
 down:
 	docker compose down --rmi all --volumes --remove-orphans
 
+# コンテナのキャッシュ削除(ローカルのみ)
 .PHONY: prune
 prune:
 	docker system prune -a
+
+# 推奨拡張機能の一括インストール
+.PHONY: ext
+ext:
+	./install_extentions.sh
