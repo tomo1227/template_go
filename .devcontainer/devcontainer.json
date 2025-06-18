@@ -14,7 +14,7 @@
     "vscode": {
       "extensions": [
         // Go
-        "golang.go",
+        "golang.go@0.47.3",
         "premparihar.gotest",
         // yaml, jsonc, json, toml
         "redhat.vscode-yaml",

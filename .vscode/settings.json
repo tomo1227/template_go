@@ -38,7 +38,8 @@
   "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.toolsManagement.autoUpdate": true,
-  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.toml", "--fast-only"],
+  // --fast-onlyをつけるとerrcheckが使えなくなる
+  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.toml"],
   "go.formatTool": "custom",
   "go.alternateTools": {
     "customFormatter": "golangci-lint"
